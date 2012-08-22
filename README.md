@@ -11,8 +11,7 @@ Requirements
 Instalation in few steps
 ------------------------
 
- 1. Configure web.xml
-Append filter mapping and listener
+ 1. Configure web.xml, append filter mapping and listener.
 
 ```xml
 <filter>
@@ -27,13 +26,13 @@ Append filter mapping and listener
   <listener-class>com.pulsar.framework.listener.ContextStartListener</listener-class>
 </listener>
 ```
- 2. Create file app-config.properties
-Define package of controlles and view prefix/suffix, create this file in path /WEB-INF/app-config.properties
+ 2. Create file /WEB-INF/app-config.properties, define package of controlles and view prefix/suffix.
 
-    scan.controller =   com.yourcompany.projectname.controller
-    view.prefix     =   /WEB-INF/views/
-    view.suffix     =   .jsp
-
+```properties
+scan.controller =   com.yourcompany.projectname.controller
+view.prefix     =   /WEB-INF/views/
+view.suffix     =   .jsp
+```
  3. Create your first controller
 
 ```java
