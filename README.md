@@ -8,10 +8,10 @@ Requirements
 
  - Java 
 
-Instalation in 3 steps
-----------------------
+Instalation
+-----------
 
- + Configure web.xml, append filter mapping and listener.
+Configure web.xml, append filter mapping and listener.
 
 ```xml
 <filter>
@@ -26,17 +26,17 @@ Instalation in 3 steps
   <listener-class>com.pulsar.framework.listener.ContextStartListener</listener-class>
 </listener>
 ```
- + Create file /WEB-INF/app-config.properties, define package of controlles and view prefix/suffix.
+Create file /WEB-INF/app-config.properties and define package of controlles & view prefix/suffix.
 
 ```properties
-scan.controller =   com.yourcompany.projectname.controller
+scan.controller =   com.project.controller
 view.prefix     =   /WEB-INF/views/
 view.suffix     =   .jsp
 ```
- + Create your first controller
+Create your first controller
 
 ```java
-package com.yourcompany.projectname.controller;
+package com.project.controller;
 
 @Controller("hello")
 public class HelloController {
